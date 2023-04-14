@@ -120,4 +120,5 @@ local null_opts = lsp.build_options("null-ls", {})
 
 vim.diagnostic.config({
 	virtual_text = true,
+	underline = false,
 })
