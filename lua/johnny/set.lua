@@ -7,6 +7,8 @@ vim.opt.ignorecase = true --- Needed for smartcase
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+vim.opt.list = false
+
 vim.opt.tabstop = 2
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
