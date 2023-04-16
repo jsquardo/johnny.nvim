@@ -30,19 +30,24 @@ require("catppuccin").setup({
 		telescope = true,
 		notify = true,
 		mini = false,
+		native_lsp = {
+			enabled = true,
+			underlines = {
+				errors = {},
+				hints = {},
+				warnings = {},
+				information = {},
+			},
+		},
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
-	custom_highlights = function(colors)
-		return {
-			Underlined = { style = {} },
-			DiagnosticError = { bg = colors.none, fg = error, style = false },
-			--DiagnosticWarn = { bg = colors.none, fg = warning, style = virtual_text.warnings },
-			--DiagnosticInfo = { bg = colors.none, fg = info, style = virtual_text.information },
-			--DiagnosticHint = { bg = colors.none, fg = hint, style = virtual_text.hints },
-
-			DiagnosticUnderlineError = { style = false, sp = error },
-		}
-	end,
+	highlight_overrides = {
+		all = function(colors)
+			return {
+				underlines = {},
+			}
+		end,
+	},
 })
 
 -- setup must be called before loading
