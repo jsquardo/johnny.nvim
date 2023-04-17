@@ -85,6 +85,7 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 		-- Rust
+		use({ "rust-lang/rust.vim" }),
 		use("simrat39/rust-tools.nvim"),
 		use({
 			"saecki/crates.nvim",
