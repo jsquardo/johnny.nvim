@@ -123,5 +123,8 @@ return require("packer").startup(function(use)
 
 		-- Golang
 		use("ray-x/go.nvim"),
+
+		-- Markdown
+		use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" }),
 	})
 end)
