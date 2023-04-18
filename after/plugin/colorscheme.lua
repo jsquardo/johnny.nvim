@@ -28,6 +28,7 @@ require("catppuccin").setup({
 		gitsigns = true,
 		nvimtree = true,
 		telescope = true,
+		hop = true,
 		notify = true,
 		mini = false,
 		native_lsp = {
