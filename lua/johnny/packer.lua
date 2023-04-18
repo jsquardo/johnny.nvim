@@ -126,5 +126,11 @@ return require("packer").startup(function(use)
 
 		-- Markdown
 		use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" }),
+
+		-- HOP
+		use({
+			"phaazon/hop.nvim",
+			branch = "v2", -- optional but strongly recommended
+		}),
 	})
 end)
