@@ -1,5 +1,5 @@
 require("FTerm").setup({
-	cmd = "chsh -s /bin/zsh",
+	--cmd = "chsh -s /bin/zsh",
 })
 
 vim.keymap.set("n", "<A-`>", '<CMD>lua require("FTerm").toggle()<CR>')
