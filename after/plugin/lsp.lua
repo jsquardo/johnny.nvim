@@ -31,7 +31,25 @@ lsp.configure("lua-language-server", {
 	},
 })
 
+-- initialize rust_analyzer with rust-tools
+-- see :help lsp-zero.build_options()
+local rust_lsp = lsp.build_options("rust_analyzer", {
+	single_file_support = true,
+	on_attach = function(client, bufnr)
+		print("hello rust-tools")
+	end,
+})
+
+require("rust-tools").setup({ server = rust_lsp })
+-- (Optional) Configure lua language server for neovim
+require("lspconfig").eslint.setup({})
+
+lsp.setup()
+
 local cmp = require("cmp")
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
@@ -66,6 +84,7 @@ lsp.setup_nvim_cmp({
 	sources = {
 		{ name = "path" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lua" },
 		{ name = "buffer", keyword_length = 3 },
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "crates" },
@@ -90,6 +109,7 @@ cmp.setup({
 	sources = {
 		{ name = "path" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lua" },
 		{ name = "buffer", keyword_length = 3 },
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "crates" },
@@ -99,21 +119,6 @@ cmp.setup({
 		["<C-b>"] = cmp_action.luasnip_jump_backward(),
 	},
 })
-
--- initialize rust_analyzer with rust-tools
--- see :help lsp-zero.build_options()
-local rust_lsp = lsp.build_options("rust_analyzer", {
-	single_file_support = true,
-	on_attach = function(client, bufnr)
-		print("hello rust-tools")
-	end,
-})
-
-require("rust-tools").setup({ server = rust_lsp })
--- (Optional) Configure lua language server for neovim
-require("lspconfig").eslint.setup({})
-
-lsp.setup()
 
 local null_ls = require("null-ls")
 local null_opts = lsp.build_options("null-ls", {})
