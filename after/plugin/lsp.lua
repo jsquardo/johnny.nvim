@@ -21,6 +21,8 @@ lsp.ensure_installed({
 })
 
 -- Fix Undefined global 'vim'
+lsp.nvim_workspace()
+
 lsp.configure("lua-language-server", {
 	settings = {
 		Lua = {
