@@ -17,6 +17,8 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
+vim.opt.signcolumn = "yes"
+
 vim.opt.wrap = true
 
 vim.opt.swapfile = false
