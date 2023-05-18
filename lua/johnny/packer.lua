@@ -140,6 +140,12 @@ return require("packer").startup(function(use)
 			"ray-x/lsp_signature.nvim",
 		}),
 
+		-- Lualine
+		use({
+			"nvim-lualine/lualine.nvim",
+			requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		}),
+
 		-- Lspsaga
 		use({
 			"glepnir/lspsaga.nvim",
