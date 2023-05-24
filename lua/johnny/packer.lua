@@ -146,6 +146,9 @@ return require("packer").startup(function(use)
 			requires = { "nvim-tree/nvim-web-devicons", opt = true },
 		}),
 
+		-- Move.nvim
+		use("fedepujol/move.nvim"),
+
 		-- Lspsaga
 		use({
 			"glepnir/lspsaga.nvim",

@@ -156,13 +156,17 @@ _G.packer_plugins = {
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspsaga.nvim"] = {
-    after = { "nvim-web-devicons" },
-    config = { "\27LJ\2\n¯\4\0\0\6\0\20\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0025\3\t\0005\4\n\0005\5\v\0=\5\f\4=\4\r\3=\3\14\0025\3\15\0=\3\16\0025\3\17\0005\4\18\0=\4\r\3=\3\19\2B\0\2\1K\0\1\0\16code_action\1\0\2\tquit\6q\texec\t<CR>\1\0\3\17num_shortcut\2\20extend_gitsigns\2\21show_server_name\1\nhover\1\0\3\14max_width\4³æÌ™\3³æŒÿ\3\14open_link\agx\17open_browser\f!chrome\vfinder\tkeys\tquit\1\3\0\0\6q\n<ESC>\1\0\a\nsplit\6i\fjump_to\6p\21close_in_preview\n<ESC>\vtabnew\6r\ttabe\6t\vvsplit\6s\19expand_or_jump\6o\1\0\3\14min_width\3\30\15max_height\4\0€€€ÿ\3\21force_max_height\1\aui\19scroll_preview\1\0\2\16scroll_down\n<C-f>\14scroll_up\n<C-b>\fpreview\1\0\1\20request_timeout\3Ð\15\1\0\2\16lines_below\3\n\16lines_above\3\0\nsetup\flspsaga\frequire\0" },
+    config = { "\27LJ\2\n¯\4\0\0\6\0\20\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0025\3\t\0005\4\n\0005\5\v\0=\5\f\4=\4\r\3=\3\14\0025\3\15\0=\3\16\0025\3\17\0005\4\18\0=\4\r\3=\3\19\2B\0\2\1K\0\1\0\16code_action\1\0\2\texec\t<CR>\tquit\6q\1\0\3\20extend_gitsigns\2\21show_server_name\1\17num_shortcut\2\nhover\1\0\3\14open_link\agx\17open_browser\f!chrome\14max_width\4³æÌ™\3³æŒÿ\3\vfinder\tkeys\tquit\1\3\0\0\6q\n<ESC>\1\0\a\fjump_to\6p\vtabnew\6r\nsplit\6i\ttabe\6t\vvsplit\6s\19expand_or_jump\6o\21close_in_preview\n<ESC>\1\0\3\15max_height\4\0€€€ÿ\3\21force_max_height\1\14min_width\3\30\aui\19scroll_preview\1\0\2\14scroll_up\n<C-b>\16scroll_down\n<C-f>\fpreview\1\0\1\20request_timeout\3Ð\15\1\0\2\16lines_above\3\0\16lines_below\3\n\nsetup\flspsaga\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -173,6 +177,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["move.nvim"] = {
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/move.nvim",
+    url = "https://github.com/fedepujol/move.nvim"
   },
   ["null-ls.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fnull-ls\frequire\0" },
@@ -212,9 +221,6 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
-    load_after = {
-      ["lspsaga.nvim"] = true
-    },
     loaded = false,
     needs_bufread = false,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
@@ -258,14 +264,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fnull-ls\frequire\0", "config", "null-ls.nvim")
-time([[Config for null-ls.nvim]], false)
 -- Config for: crates.nvim
 time([[Config for crates.nvim]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
 time([[Config for crates.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fnull-ls\frequire\0", "config", "null-ls.nvim")
+time([[Config for null-ls.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
