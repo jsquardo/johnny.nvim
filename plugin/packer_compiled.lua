@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["cellular-automaton.nvim"] = {
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
+    url = "https://github.com/eandrju/cellular-automaton.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -156,7 +161,7 @@ _G.packer_plugins = {
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspsaga.nvim"] = {
-    config = { "\27LJ\2\n¯\4\0\0\6\0\20\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0025\3\t\0005\4\n\0005\5\v\0=\5\f\4=\4\r\3=\3\14\0025\3\15\0=\3\16\0025\3\17\0005\4\18\0=\4\r\3=\3\19\2B\0\2\1K\0\1\0\16code_action\1\0\2\texec\t<CR>\tquit\6q\1\0\3\20extend_gitsigns\2\21show_server_name\1\17num_shortcut\2\nhover\1\0\3\14open_link\agx\17open_browser\f!chrome\14max_width\4³æÌ™\3³æŒÿ\3\vfinder\tkeys\tquit\1\3\0\0\6q\n<ESC>\1\0\a\fjump_to\6p\vtabnew\6r\nsplit\6i\ttabe\6t\vvsplit\6s\19expand_or_jump\6o\21close_in_preview\n<ESC>\1\0\3\15max_height\4\0€€€ÿ\3\21force_max_height\1\14min_width\3\30\aui\19scroll_preview\1\0\2\14scroll_up\n<C-b>\16scroll_down\n<C-f>\fpreview\1\0\1\20request_timeout\3Ð\15\1\0\2\16lines_above\3\0\16lines_below\3\n\nsetup\flspsaga\frequire\0" },
+    config = { "\27LJ\2\nè\5\0\0\6\0\25\0\0316\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0025\3\t\0005\4\n\0005\5\v\0=\5\f\4=\4\r\3=\3\14\0025\3\15\0=\3\16\0025\3\17\0004\4\0\0=\4\18\3=\3\19\0025\3\20\0=\3\21\0025\3\22\0005\4\23\0=\4\r\3=\3\24\2B\0\2\1K\0\1\0\16code_action\1\0\2\texec\t<CR>\tquit\6q\1\0\3\20extend_gitsigns\2\21show_server_name\1\17num_shortcut\2\nhover\1\0\3\14max_width\4³æÌ™\3³æŒÿ\3\17open_browser\f!chrome\14open_link\agx\21symbol_in_winbar\20ignore_patterns\1\0\a\14show_file\2\17hide_keyword\2\15color_mode\2\14separator\tï‘Š \venable\2\17respect_root\1\17folder_level\3\2\14lightbulb\1\0\2\fenabled\1\17virtual_text\2\vfinder\tkeys\tquit\1\3\0\0\6q\n<ESC>\1\0\a\ttabe\6t\vvsplit\6s\19expand_or_jump\6o\nsplit\6i\fjump_to\6p\21close_in_preview\n<ESC>\vtabnew\6r\1\0\3\15max_height\4\0€€€ÿ\3\21force_max_height\1\14min_width\3\30\aui\19scroll_preview\1\0\2\14scroll_up\n<C-b>\16scroll_down\n<C-f>\fpreview\1\0\1\20request_timeout\3Ð\15\1\0\2\16lines_above\3\0\16lines_below\3\n\nsetup\flspsaga\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -190,7 +195,7 @@ _G.packer_plugins = {
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    config = { "\27LJ\2\n¦\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\14ts_config\15javascript\1\2\0\0\20template_string\blua\1\0\1\tjava\1\1\2\0\0\vstring\1\0\1\rcheck_ts\2\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
@@ -209,11 +214,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
@@ -256,6 +256,22 @@ _G.packer_plugins = {
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/johnny/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/home/johnny/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -264,18 +280,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: crates.nvim
-time([[Config for crates.nvim]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
-time([[Config for crates.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n¦\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\14ts_config\15javascript\1\2\0\0\20template_string\blua\1\0\1\tjava\1\1\2\0\0\vstring\1\0\1\rcheck_ts\2\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Config for: null-ls.nvim
 time([[Config for null-ls.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fnull-ls\frequire\0", "config", "null-ls.nvim")
 time([[Config for null-ls.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: crates.nvim
+time([[Config for crates.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
+time([[Config for crates.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
