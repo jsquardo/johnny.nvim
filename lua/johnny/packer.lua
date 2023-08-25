@@ -80,6 +80,21 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+
+	-- flybuf.nvim
+	use({
+		"glepnir/flybuf.nvim",
+		cmd = "FlyBuf",
+		config = function()
+			require("flybuf").setup({
+				hotkey = "asdfghwertyuiopzcvbnm", -- hotkye
+				border = "single", -- border
+				quit = "q", -- quit flybuf window
+				mark = "l", -- mark as delet or cancel delete
+				delete = "x", -- delete marked buffers or buffers which cursor in
+			})
+		end,
+	})
 	-- Rust
 	use({ "rust-lang/rust.vim" })
 	use("simrat39/rust-tools.nvim")
@@ -115,6 +130,17 @@ return require("packer").startup(function(use)
 					javascript = { "template_string" },
 					java = false,
 				},
+			})
+		end,
+	})
+
+	-- fidget
+	use({
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = function()
+			require("fidget").setup({
+				-- options
 			})
 		end,
 	})
@@ -172,10 +198,8 @@ return require("packer").startup(function(use)
 
 	-- Lspsaga
 	use({
-		"glepnir/lspsaga.nvim",
-		opt = true,
-		branch = "main",
-		event = "LspAttach",
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
 		config = function()
 			require("lspsaga").setup({
 				preview = {
